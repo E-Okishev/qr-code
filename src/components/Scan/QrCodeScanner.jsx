@@ -24,6 +24,7 @@ export const QrCodeScanner = () => {
   return (
     <div className={s.container}>
       <QrReader
+        constraints={{facingMode: "environment"}}
         scanDelay={1000}
         onResult={scanHandler}
         containerStyle={
